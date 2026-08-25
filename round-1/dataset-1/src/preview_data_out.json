@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "source": "Azure Functions 2019 trace (Shahrad et al., USENIX ATC 2020) + one synthetic adversarial regime; see raw_azure_admission_control.json's schema_doc/provenance_summary for full construction details and ...",
+    "description": "Request-level admission-control decisions across 5 traffic regimes (stationary/burst/drift/regime_switch/adversarial) for a conformal admission-control policy. output=1 iff the request's realized serv..."
+  },
+  "datasets": [
+    {
+      "dataset": "azure_functions_2019_admission_control_traces",
+      "examples": [
+        {
+          "input": "{\"arrival_time\": 1.0115, \"risk_score\": 0.454962, \"slo_target\": 0.01, \"regime_label\": \"stationary\", \"function_id\": \"95dc325a4a22f2d6368e04c54265752aad1ef0207cd08ed2ffa698403f3c30b3/0148f7c3e28fbf32b7f5...",
+          "output": "0",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 2,
+          "metadata_regime_label": "stationary",
+          "metadata_function_id": "95dc325a4a22f2d6368e04c54265752aad1ef0207cd08ed2ffa698403f3c30b3/0148f7c3e28fbf32b7f514307b74ca3f1fb5f9c98a9d555319920f445bbae7f8/8b6b487641e053d54d0088e499987d181b34bb4010ed68a2635d08816e26022c",
+          "metadata_request_id": 0,
+          "metadata_is_synthetic": false,
+          "metadata_provenance": "azure_functions_2019",
+          "metadata_service_time": 0.0028,
+          "metadata_slo_target": 0.01,
+          "metadata_feature_names": [
+            "arrival_time",
+            "risk_score",
+            "slo_target"
+          ]
+        },
+        {
+          "input": "{\"arrival_time\": 7.5506, \"risk_score\": 0.454962, \"slo_target\": 0.01, \"regime_label\": \"stationary\", \"function_id\": \"95dc325a4a22f2d6368e04c54265752aad1ef0207cd08ed2ffa698403f3c30b3/0148f7c3e28fbf32b7f5...",
+          "output": "0",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 2,
+          "metadata_regime_label": "stationary",
+          "metadata_function_id": "95dc325a4a22f2d6368e04c54265752aad1ef0207cd08ed2ffa698403f3c30b3/0148f7c3e28fbf32b7f514307b74ca3f1fb5f9c98a9d555319920f445bbae7f8/8b6b487641e053d54d0088e499987d181b34bb4010ed68a2635d08816e26022c",
+          "metadata_request_id": 3,
+          "metadata_is_synthetic": false,
+          "metadata_provenance": "azure_functions_2019",
+          "metadata_service_time": 0.001,
+          "metadata_slo_target": 0.01,
+          "metadata_feature_names": [
+            "arrival_time",
+            "risk_score",
+            "slo_target"
+          ]
+        },
+        {
+          "input": "{\"arrival_time\": 8.4521, \"risk_score\": 0.454962, \"slo_target\": 0.01, \"regime_label\": \"stationary\", \"function_id\": \"95dc325a4a22f2d6368e04c54265752aad1ef0207cd08ed2ffa698403f3c30b3/0148f7c3e28fbf32b7f5...",
+          "output": "0",
+          "metadata_fold": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 2,
+          "metadata_regime_label": "stationary",
+          "metadata_function_id": "95dc325a4a22f2d6368e04c54265752aad1ef0207cd08ed2ffa698403f3c30b3/0148f7c3e28fbf32b7f514307b74ca3f1fb5f9c98a9d555319920f445bbae7f8/8b6b487641e053d54d0088e499987d181b34bb4010ed68a2635d08816e26022c",
+          "metadata_request_id": 4,
+          "metadata_is_synthetic": false,
+          "metadata_provenance": "azure_functions_2019",
+          "metadata_service_time": 0.001,
+          "metadata_slo_target": 0.01,
+          "metadata_feature_names": [
+            "arrival_time",
+            "risk_score",
+            "slo_target"
+          ]
+        }
+      ]
+    }
+  ]
+}
