@@ -1,0 +1,1098 @@
+{
+  "metadata": {
+    "evaluation_name": "conformal_admission_control_regime_shift_verdict",
+    "dependency_status": {
+      "gen_art_dataset_1": "empty_at_execution_time",
+      "gen_art_experiment_1": "empty_at_execution_time",
+      "resolution": "self-generated a from-scratch multi-regime traffic dataset and re-implemented all 5 admission policies (conformal_aci, fixed_threshold, index_based, rl_frozen, oracle_hindsight) inside eval.py to produce genuine logs for the pipeline described in the artifact plan; see eval.py module docstring for full rationale."
+    },
+    "validity_notes": [
+      "gen_art_dataset_1 and gen_art_experiment_1 dependency directories were EMPTY at evaluation time; this script self-generated the traffic + policy logs (see eval.py docstring / dependency_status below).",
+      "Only 3 seeds per (policy, regime) cell (plan's minimum bar); the over-seed bootstrap variant of step 4 is NOT used (requires >=5) -- block-over-time bootstrap (concatenating the available seeds) is used instead, as the plan allows."
+    ],
+    "calibration_params": {
+      "tau0_fixed": 0.5670628002844751,
+      "load_thresh_index": 0.75,
+      "rl_k": 1.4250000000000007,
+      "mean_load_stationary": 0.5000419598113808,
+      "std_load_stationary": 0.14896108166328878
+    },
+    "policies": [
+      "conformal_aci",
+      "fixed_threshold",
+      "index_based",
+      "rl_frozen",
+      "oracle_hindsight"
+    ],
+    "baselines_for_significance_test": [
+      "fixed_threshold",
+      "index_based",
+      "rl_frozen"
+    ],
+    "regimes": [
+      "stationary",
+      "burst",
+      "drift",
+      "switch",
+      "adversarial"
+    ],
+    "overall_verdict": "CONFIRMED",
+    "overall_verdict_justification": "Conformal-ACI's MAD stayed within the pre-registered 3pp tolerance of alpha in all 5 regimes; it was Holm-corrected significantly better than baselines in 13/15 (regime,baseline) pairs (>=75% threshold); and no baseline's matched-violation-rate value gap exceeded the 50% disconfirming threshold with its CI lower bound also above 50%.",
+    "per_policy_regime_deviation_stats": {
+      "conformal_aci": {
+        "stationary": {
+          "mad_point": 0.018199583479702883,
+          "mad_ci95": [
+            0.016101313718725217,
+            0.02293128196144447
+          ],
+          "max_spike_point": 0.08750000000000001,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4653,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "burst": {
+          "mad_point": 0.014102749284135989,
+          "mad_ci95": [
+            0.014021800326250508,
+            0.01991442985155667
+          ],
+          "max_spike_point": 0.0652892561983471,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 5436,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "drift": {
+          "mad_point": 0.016875515221898566,
+          "mad_ci95": [
+            0.016925441869439405,
+            0.023537720167281336
+          ],
+          "max_spike_point": 0.09047619047619046,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4450,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "switch": {
+          "mad_point": 0.01935392245444734,
+          "mad_ci95": [
+            0.01826196964136319,
+            0.027074944365277614
+          ],
+          "max_spike_point": 0.0951219512195122,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4288,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true,
+          "persistence_after_switch_requests": [
+            null,
+            null,
+            199
+          ],
+          "recovered_within_regime": [
+            false,
+            false,
+            true
+          ],
+          "non_recovering": false
+        },
+        "adversarial": {
+          "mad_point": 0.015015717933629819,
+          "mad_ci95": [
+            0.014308679253431803,
+            0.02008717168672278
+          ],
+          "max_spike_point": 0.07333333333333333,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 5655,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        }
+      },
+      "fixed_threshold": {
+        "stationary": {
+          "mad_point": 0.024987991066188,
+          "mad_ci95": [
+            0.01990737756783853,
+            0.02735151689128861
+          ],
+          "max_spike_point": 0.0875,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4755,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "burst": {
+          "mad_point": 0.027102120758454237,
+          "mad_ci95": [
+            0.02286032207411378,
+            0.033605521871356514
+          ],
+          "max_spike_point": 0.08305084745762713,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4732,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "drift": {
+          "mad_point": 0.03316422334209863,
+          "mad_ci95": [
+            0.024696698424937675,
+            0.03588480982334429
+          ],
+          "max_spike_point": 0.11929824561403507,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4793,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        },
+        "switch": {
+          "mad_point": 0.04258761813893594,
+          "mad_ci95": [
+            0.031720437796959565,
+            0.04560804701359707
+          ],
+          "max_spike_point": 0.13999999999999999,
+          "max_spike_ci95": [
+            0.10535714285714284,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4780,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false,
+          "persistence_after_switch_requests": [
+            null,
+            null,
+            null
+          ],
+          "recovered_within_regime": [
+            false,
+            false,
+            false
+          ],
+          "non_recovering": true
+        },
+        "adversarial": {
+          "mad_point": 0.03306054450251854,
+          "mad_ci95": [
+            0.027442584294038425,
+            0.03852005372163782
+          ],
+          "max_spike_point": 0.09099099099099099,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4793,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        }
+      },
+      "index_based": {
+        "stationary": {
+          "mad_point": 0.10291439974105904,
+          "mad_ci95": [
+            0.09361174458996577,
+            0.11257544706887983
+          ],
+          "max_spike_point": 0.20158730158730157,
+          "max_spike_ci95": [
+            0.17225130890052356,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 8029,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        },
+        "burst": {
+          "mad_point": 0.08225728763870595,
+          "mad_ci95": [
+            0.07462719970936302,
+            0.09180631094307531
+          ],
+          "max_spike_point": 0.15,
+          "max_spike_ci95": [
+            0.14861930111930113,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 8107,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        },
+        "drift": {
+          "mad_point": 0.10988744781635947,
+          "mad_ci95": [
+            0.09535729973593438,
+            0.12160652760504065
+          ],
+          "max_spike_point": 0.3615384615384616,
+          "max_spike_ci95": [
+            0.2222175141242938,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 7032,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        },
+        "switch": {
+          "mad_point": 0.12905497527639634,
+          "mad_ci95": [
+            0.09034812837509332,
+            0.1510516403548758
+          ],
+          "max_spike_point": 0.7000000000000001,
+          "max_spike_ci95": [
+            0.4714285714285714,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4098,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false,
+          "persistence_after_switch_requests": [
+            null,
+            356,
+            null
+          ],
+          "recovered_within_regime": [
+            false,
+            true,
+            false
+          ],
+          "non_recovering": false
+        },
+        "adversarial": {
+          "mad_point": 0.07588078122375967,
+          "mad_ci95": [
+            0.06898049434480975,
+            0.08600214042651705
+          ],
+          "max_spike_point": 0.1789473684210526,
+          "max_spike_ci95": [
+            0.14615384615384616,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 8050,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        }
+      },
+      "rl_frozen": {
+        "stationary": {
+          "mad_point": 0.023417271661270198,
+          "mad_ci95": [
+            0.019066015115632964,
+            0.028152257402786537
+          ],
+          "max_spike_point": 0.13076923076923078,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4461,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "burst": {
+          "mad_point": 0.033810751411253205,
+          "mad_ci95": [
+            0.027328464513265358,
+            0.041844317864037396
+          ],
+          "max_spike_point": 0.1222222222222222,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 6529,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        },
+        "drift": {
+          "mad_point": 0.04202266701913809,
+          "mad_ci95": [
+            0.02841155221714454,
+            0.04337363916611981
+          ],
+          "max_spike_point": 0.1,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 3880,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        },
+        "switch": {
+          "mad_point": 0.0558535836509205,
+          "mad_ci95": [
+            0.039201587344541315,
+            0.05944498038475703
+          ],
+          "max_spike_point": 0.1571428571428571,
+          "max_spike_ci95": [
+            0.11212121212121212,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 3530,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false,
+          "persistence_after_switch_requests": [
+            null,
+            null,
+            279
+          ],
+          "recovered_within_regime": [
+            false,
+            false,
+            true
+          ],
+          "non_recovering": false
+        },
+        "adversarial": {
+          "mad_point": 0.03501125514733009,
+          "mad_ci95": [
+            0.028934184147393058,
+            0.04402883557191501
+          ],
+          "max_spike_point": 0.15324675324675321,
+          "max_spike_ci95": [
+            0.10125690289921768,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 6665,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": false
+        }
+      },
+      "oracle_hindsight": {
+        "stationary": {
+          "mad_point": 0.02125067882311513,
+          "mad_ci95": [
+            0.017332408878397532,
+            0.024007848306356126
+          ],
+          "max_spike_point": 0.07796610169491525,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4855,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "burst": {
+          "mad_point": 0.01945052037033865,
+          "mad_ci95": [
+            0.017195207947755645,
+            0.025078457595876406
+          ],
+          "max_spike_point": 0.09327731092436975,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 5720,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "drift": {
+          "mad_point": 0.02113547016818428,
+          "mad_ci95": [
+            0.01921477848741251,
+            0.028131130110000117
+          ],
+          "max_spike_point": 0.09354838709677418,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4507,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        },
+        "switch": {
+          "mad_point": 0.01897122321637078,
+          "mad_ci95": [
+            0.018173397099068556,
+            0.026003438072896554
+          ],
+          "max_spike_point": 0.08571428571428572,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 4340,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true,
+          "persistence_after_switch_requests": [
+            0,
+            null,
+            0
+          ],
+          "recovered_within_regime": [
+            true,
+            false,
+            true
+          ],
+          "non_recovering": false
+        },
+        "adversarial": {
+          "mad_point": 0.019487325650775402,
+          "mad_ci95": [
+            0.01656792626130124,
+            0.023037269221437714
+          ],
+          "max_spike_point": 0.08309859154929577,
+          "max_spike_ci95": [
+            0.1,
+            0.9
+          ],
+          "n_seeds": 3,
+          "total_admits_across_seeds_post_burnin": 5816,
+          "insufficient_admissions": false,
+          "bootstrap_method": "block_over_time_concat_seeds",
+          "n_bootstrap": 2000,
+          "block_length": 200,
+          "tolerance_pass_3pp": true
+        }
+      }
+    },
+    "paired_significance_tests_holm_corrected": [
+      {
+        "regime": "stationary",
+        "baseline": "fixed_threshold",
+        "paired_diff_ci95": [
+          2.0127507070824835e-05,
+          0.008329283612830782
+        ],
+        "p_boot": 0.049,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.098,
+        "conformal_significantly_better": false
+      },
+      {
+        "regime": "stationary",
+        "baseline": "index_based",
+        "paired_diff_ci95": [
+          0.0747222811191198,
+          0.0924682948971666
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "stationary",
+        "baseline": "rl_frozen",
+        "paired_diff_ci95": [
+          -0.0004204341624679983,
+          0.008699376362789583
+        ],
+        "p_boot": 0.077,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.098,
+        "conformal_significantly_better": false
+      },
+      {
+        "regime": "burst",
+        "baseline": "fixed_threshold",
+        "paired_diff_ci95": [
+          0.005705038990242803,
+          0.01694255141423232
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "burst",
+        "baseline": "index_based",
+        "paired_diff_ci95": [
+          0.05646066363872128,
+          0.07496203936964754
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "burst",
+        "baseline": "rl_frozen",
+        "paired_diff_ci95": [
+          0.010329466038197399,
+          0.024825172973015792
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "drift",
+        "baseline": "fixed_threshold",
+        "paired_diff_ci95": [
+          0.00505740394202724,
+          0.015415124257940682
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "drift",
+        "baseline": "index_based",
+        "paired_diff_ci95": [
+          0.07596144938239968,
+          0.10114631141164979
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "drift",
+        "baseline": "rl_frozen",
+        "paired_diff_ci95": [
+          0.008963213537119616,
+          0.022964552706865083
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "switch",
+        "baseline": "fixed_threshold",
+        "paired_diff_ci95": [
+          0.008895733445238,
+          0.022368276337164816
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "switch",
+        "baseline": "index_based",
+        "paired_diff_ci95": [
+          0.06834855556273683,
+          0.12644369116126283
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "switch",
+        "baseline": "rl_frozen",
+        "paired_diff_ci95": [
+          0.01742850737893242,
+          0.03646832878341832
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "adversarial",
+        "baseline": "fixed_threshold",
+        "paired_diff_ci95": [
+          0.010071799695368224,
+          0.021743728560529196
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "adversarial",
+        "baseline": "index_based",
+        "paired_diff_ci95": [
+          0.05160876990136971,
+          0.06936729980390217
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      },
+      {
+        "regime": "adversarial",
+        "baseline": "rl_frozen",
+        "paired_diff_ci95": [
+          0.011836507207163439,
+          0.02687490694054841
+        ],
+        "p_boot": 0.0,
+        "insufficient_admissions": false,
+        "n_valid_bootstrap_resamples": 2000,
+        "p_holm": 0.0,
+        "conformal_significantly_better": true
+      }
+    ],
+    "rl_non_recovering_disconfirmer": {
+      "drift": {
+        "mad": 0.04202266701913809,
+        "exceeds_tolerance": true
+      },
+      "switch": {
+        "mad": 0.0558535836509205,
+        "exceeds_tolerance": true,
+        "non_recovering": false
+      },
+      "adversarial": {
+        "mad": 0.03501125514733009,
+        "exceeds_tolerance": true
+      }
+    },
+    "matched_violation_rate_value_comparison_stationary": {
+      "fixed_threshold": {
+        "rethreshold_method": "bisection re-threshold on risk score (same stationary log); tau=0.5511",
+        "target_violation_rate_matched_to_pp05": 10.081,
+        "realized_violation_rate_matched_pct": 10.128,
+        "total_value_conformal": 1791.1135968246913,
+        "total_value_baseline_matched": 1845.9017429367307,
+        "value_gap_pct": 2.9680965588598656,
+        "value_gap_pct_ci95": [
+          -7.091227542666534,
+          12.24762854807932
+        ],
+        "degenerate_matched_denominator": false,
+        "degenerate_note": null,
+        "disconfirmed_over_50pct_loss": false
+      },
+      "index_based": {
+        "rethreshold_method": "bisection re-threshold on instantaneous load (same stationary log); tau=0.0748",
+        "target_violation_rate_matched_to_pp05": 10.081,
+        "realized_violation_rate_matched_pct": 0.0,
+        "total_value_conformal": 1791.1135968246913,
+        "total_value_baseline_matched": 3.8621315315123086,
+        "value_gap_pct": -46276.29718745851,
+        "value_gap_pct_ci95": [
+          -168467.5477308964,
+          -21281.49085877728
+        ],
+        "degenerate_matched_denominator": true,
+        "degenerate_note": "baseline's rate-matched admission set is <5% the size of conformal's -- value_gap_pct is numerically unstable here; the sign (conformal retains more value) is still meaningful, the magnitude is not.",
+        "disconfirmed_over_50pct_loss": false
+      },
+      "rl_frozen": {
+        "rethreshold_method": "bisection re-search over frozen decision-boundary width k (same stationary log); k=1.3333",
+        "target_violation_rate_matched_to_pp05": 10.081,
+        "realized_violation_rate_matched_pct": 10.047,
+        "total_value_conformal": 1791.1135968246913,
+        "total_value_baseline_matched": 1678.1256109496512,
+        "value_gap_pct": -6.732987396044815,
+        "value_gap_pct_ci95": [
+          -17.239286548251837,
+          2.383238508314676
+        ],
+        "degenerate_matched_denominator": false,
+        "degenerate_note": null,
+        "disconfirmed_over_50pct_loss": false
+      },
+      "oracle_hindsight": {
+        "rethreshold_method": "no re-thresholding needed: hindsight-optimal oracle already targets alpha per window by construction",
+        "target_violation_rate_matched_to_pp05": 10.081,
+        "realized_violation_rate_matched_pct": 10.97,
+        "total_value_conformal": 1791.1135968246913,
+        "total_value_baseline_matched": 1945.029902895506,
+        "value_gap_pct": 7.913313098255418,
+        "value_gap_pct_ci95": [
+          -0.9944410168068885,
+          15.9419223920693
+        ],
+        "degenerate_matched_denominator": false,
+        "degenerate_note": null,
+        "disconfirmed_over_50pct_loss": false
+      }
+    },
+    "phase3_knapsack_vs_fcfs_check": {
+      "mad_fcfs": 0.03008617561372568,
+      "mad_knapsack": 0.03157727282599895,
+      "mad_diff_ci95_knapsack_minus_fcfs": [
+        -0.0022724567072485036,
+        0.00582995804189563
+      ],
+      "guarantee_indistinguishable": true,
+      "total_value_fcfs": 1816.1634090723385,
+      "total_value_knapsack": 1862.9902025493398,
+      "value_gain_ci95": [
+        19.030554184928416,
+        86.55249515700821
+      ],
+      "value_gain_significant_and_positive": true
+    }
+  },
+  "metrics_agg": {
+    "alpha": 0.1,
+    "window_requests": 200,
+    "n_per_regime": 3000,
+    "n_seeds": 3,
+    "n_bootstrap": 2000,
+    "tolerance_pp": 0.03,
+    "conformal_mad_mean_across_regimes": 0.01670949767476292,
+    "conformal_tolerance_all_regimes_pass": 1.0,
+    "significant_pairs_fraction": 0.8666666666666667,
+    "rl_disconfirmer_pass": 1.0,
+    "knapsack_guarantee_indistinguishable": 1.0,
+    "knapsack_value_gain_significant": 1.0,
+    "value_gap_pct_vs_fixed_threshold": 2.9680965588598656,
+    "value_gap_pct_vs_index_based": -46276.29718745851,
+    "value_gap_pct_vs_rl_frozen": -6.732987396044815
+  },
+  "datasets": [
+    {
+      "dataset": "self_generated_multi_regime_admission_control_logs",
+      "examples": [
+        {
+          "input": "policy=conformal_aci, regime=stationary",
+          "output": "{\"mad_point\": 0.018199583479702883, \"mad_ci95\": [0.016101313718725217, 0.02293128196144447], \"max_spike_point\": 0.08750000000000001, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "conformal_aci",
+          "metadata_regime": "stationary",
+          "eval_mad": 0.018199583479702883,
+          "eval_max_spike": 0.08750000000000001
+        },
+        {
+          "input": "policy=conformal_aci, regime=burst",
+          "output": "{\"mad_point\": 0.014102749284135989, \"mad_ci95\": [0.014021800326250508, 0.01991442985155667], \"max_spike_point\": 0.0652892561983471, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "conformal_aci",
+          "metadata_regime": "burst",
+          "eval_mad": 0.014102749284135989,
+          "eval_max_spike": 0.0652892561983471
+        },
+        {
+          "input": "policy=conformal_aci, regime=drift",
+          "output": "{\"mad_point\": 0.016875515221898566, \"mad_ci95\": [0.016925441869439405, 0.023537720167281336], \"max_spike_point\": 0.09047619047619046, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "conformal_aci",
+          "metadata_regime": "drift",
+          "eval_mad": 0.016875515221898566,
+          "eval_max_spike": 0.09047619047619046
+        },
+        {
+          "input": "policy=conformal_aci, regime=switch",
+          "output": "{\"mad_point\": 0.01935392245444734, \"mad_ci95\": [0.01826196964136319, 0.027074944365277614], \"max_spike_point\": 0.0951219512195122, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "conformal_aci",
+          "metadata_regime": "switch",
+          "eval_mad": 0.01935392245444734,
+          "eval_max_spike": 0.0951219512195122
+        },
+        {
+          "input": "policy=conformal_aci, regime=adversarial",
+          "output": "{\"mad_point\": 0.015015717933629819, \"mad_ci95\": [0.014308679253431803, 0.02008717168672278], \"max_spike_point\": 0.07333333333333333, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "conformal_aci",
+          "metadata_regime": "adversarial",
+          "eval_mad": 0.015015717933629819,
+          "eval_max_spike": 0.07333333333333333
+        },
+        {
+          "input": "policy=fixed_threshold, regime=stationary",
+          "output": "{\"mad_point\": 0.024987991066188, \"mad_ci95\": [0.01990737756783853, 0.02735151689128861], \"max_spike_point\": 0.0875, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "fixed_threshold",
+          "metadata_regime": "stationary",
+          "eval_mad": 0.024987991066188,
+          "eval_max_spike": 0.0875
+        },
+        {
+          "input": "policy=fixed_threshold, regime=burst",
+          "output": "{\"mad_point\": 0.027102120758454237, \"mad_ci95\": [0.02286032207411378, 0.033605521871356514], \"max_spike_point\": 0.08305084745762713, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "fixed_threshold",
+          "metadata_regime": "burst",
+          "eval_mad": 0.027102120758454237,
+          "eval_max_spike": 0.08305084745762713
+        },
+        {
+          "input": "policy=fixed_threshold, regime=drift",
+          "output": "{\"mad_point\": 0.03316422334209863, \"mad_ci95\": [0.024696698424937675, 0.03588480982334429], \"max_spike_point\": 0.11929824561403507, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "fixed_threshold",
+          "metadata_regime": "drift",
+          "eval_mad": 0.03316422334209863,
+          "eval_max_spike": 0.11929824561403507
+        },
+        {
+          "input": "policy=fixed_threshold, regime=switch",
+          "output": "{\"mad_point\": 0.04258761813893594, \"mad_ci95\": [0.031720437796959565, 0.04560804701359707], \"max_spike_point\": 0.13999999999999999, \"max_spike_ci95\": [0.10535714285714284, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "fixed_threshold",
+          "metadata_regime": "switch",
+          "eval_mad": 0.04258761813893594,
+          "eval_max_spike": 0.13999999999999999
+        },
+        {
+          "input": "policy=fixed_threshold, regime=adversarial",
+          "output": "{\"mad_point\": 0.03306054450251854, \"mad_ci95\": [0.027442584294038425, 0.03852005372163782], \"max_spike_point\": 0.09099099099099099, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "fixed_threshold",
+          "metadata_regime": "adversarial",
+          "eval_mad": 0.03306054450251854,
+          "eval_max_spike": 0.09099099099099099
+        },
+        {
+          "input": "policy=index_based, regime=stationary",
+          "output": "{\"mad_point\": 0.10291439974105904, \"mad_ci95\": [0.09361174458996577, 0.11257544706887983], \"max_spike_point\": 0.20158730158730157, \"max_spike_ci95\": [0.17225130890052356, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "index_based",
+          "metadata_regime": "stationary",
+          "eval_mad": 0.10291439974105904,
+          "eval_max_spike": 0.20158730158730157
+        },
+        {
+          "input": "policy=index_based, regime=burst",
+          "output": "{\"mad_point\": 0.08225728763870595, \"mad_ci95\": [0.07462719970936302, 0.09180631094307531], \"max_spike_point\": 0.15, \"max_spike_ci95\": [0.14861930111930113, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "index_based",
+          "metadata_regime": "burst",
+          "eval_mad": 0.08225728763870595,
+          "eval_max_spike": 0.15
+        },
+        {
+          "input": "policy=index_based, regime=drift",
+          "output": "{\"mad_point\": 0.10988744781635947, \"mad_ci95\": [0.09535729973593438, 0.12160652760504065], \"max_spike_point\": 0.3615384615384616, \"max_spike_ci95\": [0.2222175141242938, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "index_based",
+          "metadata_regime": "drift",
+          "eval_mad": 0.10988744781635947,
+          "eval_max_spike": 0.3615384615384616
+        },
+        {
+          "input": "policy=index_based, regime=switch",
+          "output": "{\"mad_point\": 0.12905497527639634, \"mad_ci95\": [0.09034812837509332, 0.1510516403548758], \"max_spike_point\": 0.7000000000000001, \"max_spike_ci95\": [0.4714285714285714, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "index_based",
+          "metadata_regime": "switch",
+          "eval_mad": 0.12905497527639634,
+          "eval_max_spike": 0.7000000000000001
+        },
+        {
+          "input": "policy=index_based, regime=adversarial",
+          "output": "{\"mad_point\": 0.07588078122375967, \"mad_ci95\": [0.06898049434480975, 0.08600214042651705], \"max_spike_point\": 0.1789473684210526, \"max_spike_ci95\": [0.14615384615384616, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "index_based",
+          "metadata_regime": "adversarial",
+          "eval_mad": 0.07588078122375967,
+          "eval_max_spike": 0.1789473684210526
+        },
+        {
+          "input": "policy=rl_frozen, regime=stationary",
+          "output": "{\"mad_point\": 0.023417271661270198, \"mad_ci95\": [0.019066015115632964, 0.028152257402786537], \"max_spike_point\": 0.13076923076923078, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "rl_frozen",
+          "metadata_regime": "stationary",
+          "eval_mad": 0.023417271661270198,
+          "eval_max_spike": 0.13076923076923078
+        },
+        {
+          "input": "policy=rl_frozen, regime=burst",
+          "output": "{\"mad_point\": 0.033810751411253205, \"mad_ci95\": [0.027328464513265358, 0.041844317864037396], \"max_spike_point\": 0.1222222222222222, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "rl_frozen",
+          "metadata_regime": "burst",
+          "eval_mad": 0.033810751411253205,
+          "eval_max_spike": 0.1222222222222222
+        },
+        {
+          "input": "policy=rl_frozen, regime=drift",
+          "output": "{\"mad_point\": 0.04202266701913809, \"mad_ci95\": [0.02841155221714454, 0.04337363916611981], \"max_spike_point\": 0.1, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "rl_frozen",
+          "metadata_regime": "drift",
+          "eval_mad": 0.04202266701913809,
+          "eval_max_spike": 0.1
+        },
+        {
+          "input": "policy=rl_frozen, regime=switch",
+          "output": "{\"mad_point\": 0.0558535836509205, \"mad_ci95\": [0.039201587344541315, 0.05944498038475703], \"max_spike_point\": 0.1571428571428571, \"max_spike_ci95\": [0.11212121212121212, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "rl_frozen",
+          "metadata_regime": "switch",
+          "eval_mad": 0.0558535836509205,
+          "eval_max_spike": 0.1571428571428571
+        },
+        {
+          "input": "policy=rl_frozen, regime=adversarial",
+          "output": "{\"mad_point\": 0.03501125514733009, \"mad_ci95\": [0.028934184147393058, 0.04402883557191501], \"max_spike_point\": 0.15324675324675321, \"max_spike_ci95\": [0.10125690289921768, 0.9], \"tolerance_pass_3pp\": false}",
+          "metadata_policy": "rl_frozen",
+          "metadata_regime": "adversarial",
+          "eval_mad": 0.03501125514733009,
+          "eval_max_spike": 0.15324675324675321
+        },
+        {
+          "input": "policy=oracle_hindsight, regime=stationary",
+          "output": "{\"mad_point\": 0.02125067882311513, \"mad_ci95\": [0.017332408878397532, 0.024007848306356126], \"max_spike_point\": 0.07796610169491525, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "oracle_hindsight",
+          "metadata_regime": "stationary",
+          "eval_mad": 0.02125067882311513,
+          "eval_max_spike": 0.07796610169491525
+        },
+        {
+          "input": "policy=oracle_hindsight, regime=burst",
+          "output": "{\"mad_point\": 0.01945052037033865, \"mad_ci95\": [0.017195207947755645, 0.025078457595876406], \"max_spike_point\": 0.09327731092436975, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "oracle_hindsight",
+          "metadata_regime": "burst",
+          "eval_mad": 0.01945052037033865,
+          "eval_max_spike": 0.09327731092436975
+        },
+        {
+          "input": "policy=oracle_hindsight, regime=drift",
+          "output": "{\"mad_point\": 0.02113547016818428, \"mad_ci95\": [0.01921477848741251, 0.028131130110000117], \"max_spike_point\": 0.09354838709677418, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "oracle_hindsight",
+          "metadata_regime": "drift",
+          "eval_mad": 0.02113547016818428,
+          "eval_max_spike": 0.09354838709677418
+        },
+        {
+          "input": "policy=oracle_hindsight, regime=switch",
+          "output": "{\"mad_point\": 0.01897122321637078, \"mad_ci95\": [0.018173397099068556, 0.026003438072896554], \"max_spike_point\": 0.08571428571428572, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "oracle_hindsight",
+          "metadata_regime": "switch",
+          "eval_mad": 0.01897122321637078,
+          "eval_max_spike": 0.08571428571428572
+        },
+        {
+          "input": "policy=oracle_hindsight, regime=adversarial",
+          "output": "{\"mad_point\": 0.019487325650775402, \"mad_ci95\": [0.01656792626130124, 0.023037269221437714], \"max_spike_point\": 0.08309859154929577, \"max_spike_ci95\": [0.1, 0.9], \"tolerance_pass_3pp\": true}",
+          "metadata_policy": "oracle_hindsight",
+          "metadata_regime": "adversarial",
+          "eval_mad": 0.019487325650775402,
+          "eval_max_spike": 0.08309859154929577
+        }
+      ]
+    }
+  ]
+}
