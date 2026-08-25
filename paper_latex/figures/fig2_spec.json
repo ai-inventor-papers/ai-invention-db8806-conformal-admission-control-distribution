@@ -1,0 +1,28 @@
+{
+  "type": "barh_custom",
+  "note": "Rendered by fig2_gen.py (hand-written matplotlib using aii-data-fig-gen house style) because per-bar coloring by threshold, a vertical reference line, and free-text annotations are not supported by the barh generator. This file records the exact spec used.",
+  "title": "Natural Violation Rate vs Target",
+  "caption": "Each traffic regime's natural SLO-violation rate (realized when every request is admitted) against the target alpha = 0.10. Three regimes sit well below the target, leaving an admission policy nothing to correct; two sit above it, where admission control is a genuine constraint.",
+  "xlabel": "Violation rate (%)",
+  "aspect": "4:3",
+  "xlim": [0, 40],
+  "categories": ["Burst", "Regime switch", "Stationary", "Drift", "Adversarial"],
+  "series": [
+    {
+      "label": "Natural violation rate",
+      "values": [0.24, 3.09, 3.95, 15.53, 38.25]
+    }
+  ],
+  "target_line": {
+    "x": 10.0,
+    "label": "Target α = 10%"
+  },
+  "below_target_categories": ["Burst", "Regime switch", "Stationary"],
+  "above_target_categories": ["Drift", "Adversarial"],
+  "below_target_color_label": "Natural rate below target",
+  "above_target_color_label": "Natural rate above target",
+  "annotations": [
+    {"text": "oracle still fails 3pp tolerance here", "near_group": "below_target"},
+    {"text": "target is a real constraint here", "near_group": "above_target"}
+  ]
+}

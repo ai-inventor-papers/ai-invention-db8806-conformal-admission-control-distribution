@@ -1,0 +1,84 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{Whittle1988}
+\citation{NinoMora2002}
+\citation{Park2024}
+\citation{Angelopoulos2022}
+\citation{Gibbs2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces End-to-end conformal admission control loop. Each arriving request's risk score is compared against the current threshold; admitted requests' realized SLO outcome feeds back into the Adaptive Conformal Inference update that moves the threshold for the next decision, while a value-aware knapsack layer ranks already-eligible requests without touching the threshold itself.}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:fig1}{{1}{3}{End-to-end conformal admission control loop. Each arriving request's risk score is compared against the current threshold; admitted requests' realized SLO outcome feeds back into the Adaptive Conformal Inference update that moves the threshold for the next decision, while a value-aware knapsack layer ranks already-eligible requests without touching the threshold itself}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Summary of Contributions}{3}{subsection.1.1}\protected@file@percent }
+\citation{Angelopoulos2021}
+\citation{Angelopoulos2022}
+\citation{Bates2021}
+\citation{Gibbs2021}
+\citation{Feldman2022}
+\citation{Bhatnagar2023}
+\citation{Bharti2026}
+\citation{Whittle1988}
+\citation{NinoMora2002}
+\citation{Park2024}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{4}{section.2}\protected@file@percent }
+\citation{Shahrad2020}
+\citation{Angelopoulos2022}
+\citation{Gibbs2021}
+\citation{Gibbs2021}
+\citation{Gibbs2021}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Preliminaries: Conformal Risk Control and Adaptive Conformal Inference}{5}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}A Formal Statement for the Admission-Control Setting}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Method: Conformal Admission Control}{6}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Risk Score and Threshold-Tracking Admission Rule}{6}{subsection.4.1}\protected@file@percent }
+\citation{Shahrad2020}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Value-Aware Admission Layer}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Setup}{7}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Real-Trace Dataset as the Primary Evaluation}{7}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Baselines, Seeds, and Statistics}{8}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{8}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}A Global Tolerance Is Not a Fair Test Across Regimes with Different Natural Violation Rates}{8}{subsection.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Each traffic regime's natural SLO-violation rate (realized when every request is admitted) against the target $\alpha = 0.10$. Three regimes sit well below the target, leaving an admission policy nothing to correct; two sit above it, where admission control is a genuine constraint.}}{9}{figure.2}\protected@file@percent }
+\newlabel{fig:fig2}{{2}{9}{Each traffic regime's natural SLO-violation rate (realized when every request is admitted) against the target $\alpha = 0.10$. Three regimes sit well below the target, leaving an admission policy nothing to correct; two sit above it, where admission control is a genuine constraint}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Where the Target Is a Real Constraint, Conformal Admission Control Wins}{10}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Post-burn-in mean absolute deviation (MAD) from the target $\alpha = 0.10$, per policy and traffic regime, on the real Azure-trace dataset. The dashed line marks the pre-registered 3-percentage-point tolerance.}}{10}{figure.3}\protected@file@percent }
+\newlabel{fig:fig3}{{3}{10}{Post-burn-in mean absolute deviation (MAD) from the target $\alpha = 0.10$, per policy and traffic regime, on the real Azure-trace dataset. The dashed line marks the pre-registered 3-percentage-point tolerance}{figure.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Post-burn-in mean absolute deviation (MAD) from the target $\alpha = 0.10$, per policy and regime, on the real Azure-trace dataset. $n = 5$ bootstrap seeds $\times $ full regime row count per cell. Bold marks the only non-oracle pass.}}{11}{table.1}\protected@file@percent }
+\newlabel{tab:mad}{{1}{11}{Post-burn-in mean absolute deviation (MAD) from the target $\alpha = 0.10$, per policy and regime, on the real Azure-trace dataset. $n = 5$ bootstrap seeds $\times $ full regime row count per cell. Bold marks the only non-oracle pass}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}The Safety Guarantee at Matched Violation Rate}{11}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Eta Sensitivity}{11}{subsection.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mean absolute deviation (MAD) from the target $\alpha = 0.10$ as a function of the ACI step size $\eta $, for the three regimes where responsiveness matters most, on the real Azure-trace dataset.}}{12}{figure.4}\protected@file@percent }
+\newlabel{fig:fig4}{{4}{12}{Mean absolute deviation (MAD) from the target $\alpha = 0.10$ as a function of the ACI step size $\eta $, for the three regimes where responsiveness matters most, on the real Azure-trace dataset}{figure.4}{}}
+\citation{Gibbs2021}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}The Value-Aware Admission Layer: A Negative Result on the Real Trace}{13}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Robustness Check: Agreement with the Earlier Self-Generated Simulator}{13}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{13}{section.7}\protected@file@percent }
+\citation{Park2024}
+\citation{Bhatnagar2023}
+\citation{Bharti2026}
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Angelopoulos2021}{{1}{2021}{{Angelopoulos and Bates}}{{}}}
+\bibcite{Angelopoulos2022}{{2}{2022}{{Angelopoulos et~al.}}{{Angelopoulos, Bates, Fisch, Lei, and Schuster}}}
+\bibcite{Bates2021}{{3}{2021}{{Bates et~al.}}{{Bates, Angelopoulos, Lei, Malik, and Jordan}}}
+\bibcite{Bharti2026}{{4}{2026}{{Bharti et~al.}}{{Bharti, Pal, Teneggi, and Sulam}}}
+\bibcite{Bhatnagar2023}{{5}{2023}{{Bhatnagar et~al.}}{{Bhatnagar, Wang, Xiong, and Bai}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{15}{section.8}\protected@file@percent }
+\bibcite{Feldman2022}{{6}{2022}{{Feldman et~al.}}{{Feldman, Ringel, Bates, and Romano}}}
+\bibcite{Gibbs2021}{{7}{2021}{{Gibbs and Candès}}{{}}}
+\bibcite{NinoMora2002}{{8}{2002}{{Niño-Mora}}{{}}}
+\bibcite{Park2024}{{9}{2024}{{Park et~al.}}{{Park, Park, Jung, Lim, Yeo, and Han}}}
+\bibcite{Shahrad2020}{{10}{2020}{{Shahrad et~al.}}{{Shahrad, Fonseca, Goiri, Chaudhry, Batum, Cooke, Laureano, Tresness, Russinovich, and Bianchini}}}
+\bibcite{Whittle1988}{{11}{1988}{{Whittle}}{{}}}
+\gdef \@abspage@last{16}

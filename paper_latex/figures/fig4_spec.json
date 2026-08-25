@@ -1,0 +1,26 @@
+{
+  "type": "line",
+  "title": "Step Size Sensitivity by Regime",
+  "xlabel": "Step size eta",
+  "ylabel": "MAD from target alpha=0.10",
+  "aspect": "4:3",
+  "logx": true,
+  "ylim": [0, 0.45],
+  "series": [
+    {
+      "label": "Stationary",
+      "x": [0.01, 0.02, 0.05, 0.10, 0.20],
+      "values": [0.0599, 0.0599, 0.0600, 0.0609, 0.0629]
+    },
+    {
+      "label": "Regime switch",
+      "x": [0.01, 0.02, 0.05, 0.10, 0.20],
+      "values": [0.0688, 0.0688, 0.0688, 0.0712, 0.0983]
+    },
+    {
+      "label": "Adversarial",
+      "x": [0.01, 0.02, 0.05, 0.10, 0.20],
+      "values": [0.3916, 0.3580, 0.2418, 0.1443, 0.0448]
+    }
+  ]
+}

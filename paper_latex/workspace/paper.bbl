@@ -1,0 +1,88 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Angelopoulos and Bates(2021)]{Angelopoulos2021}
+Anastasios~Nikolas Angelopoulos and Stephen Bates.
+\newblock A gentle introduction to conformal prediction and distribution-free
+  uncertainty quantification.
+\newblock \emph{ArXiv}, abs/2107.07511, 2021.
+
+\bibitem[Angelopoulos et~al.(2022)Angelopoulos, Bates, Fisch, Lei, and
+  Schuster]{Angelopoulos2022}
+Anastasios~Nikolas Angelopoulos, Stephen Bates, Adam Fisch, Lihua Lei, and Tal
+  Schuster.
+\newblock Conformal risk control.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2208.02814, 2022.
+\newblock \doi{10.48550/arXiv.2208.02814}.
+
+\bibitem[Bates et~al.(2021)Bates, Angelopoulos, Lei, Malik, and
+  Jordan]{Bates2021}
+Stephen Bates, Anastasios~Nikolas Angelopoulos, Lihua Lei, J.~Malik, and
+  Michael~I. Jordan.
+\newblock Distribution-free, risk-controlling prediction sets.
+\newblock In \emph{Journal of the ACM}, volume~68, pages 43:1--43:34, 2021.
+\newblock \doi{10.1145/3478535}.
+
+\bibitem[Bharti et~al.(2026)Bharti, Pal, Teneggi, and Sulam]{Bharti2026}
+Beepul Bharti, Ambar Pal, Jacopo Teneggi, and Jeremias Sulam.
+\newblock Parameter-free and group conditional online conformal prediction.
+\newblock \emph{ArXiv}, abs/2606.00419, 2026.
+\newblock \doi{10.48550/arXiv.2606.00419}.
+
+\bibitem[Bhatnagar et~al.(2023)Bhatnagar, Wang, Xiong, and Bai]{Bhatnagar2023}
+Aadyot Bhatnagar, Haiquan Wang, Caiming Xiong, and Yu~Bai.
+\newblock Improved online conformal prediction via strongly adaptive online
+  learning.
+\newblock In \emph{International Conference on Machine Learning}, volume
+  abs/2302.07869, 2023.
+\newblock \doi{10.48550/arXiv.2302.07869}.
+
+\bibitem[Feldman et~al.(2022)Feldman, Ringel, Bates, and Romano]{Feldman2022}
+Shai Feldman, L.~Ringel, Stephen Bates, and Yaniv Romano.
+\newblock Achieving risk control in online learning settings.
+\newblock In \emph{Trans. Mach. Learn. Res.}, volume 2023, 2022.
+
+\bibitem[Gibbs and Candès(2021)]{Gibbs2021}
+Isaac Gibbs and E.~Candès.
+\newblock Adaptive conformal inference under distribution shift.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2106.00170, 2021.
+\newblock \doi{10.48550/arXiv.2106.00170}.
+
+\bibitem[Niño-Mora(2002)]{NinoMora2002}
+J.~Niño-Mora.
+\newblock Dynamic allocation indices for restless projects and queueing
+  admission control: a polyhedral approach.
+\newblock In \emph{Mathematical programming}, volume~93, pages 361--413, 2002.
+\newblock \doi{10.1007/s10107-002-0362-6}.
+
+\bibitem[Park et~al.(2024)Park, Park, Jung, Lim, Yeo, and Han]{Park2024}
+Jinwoo Park, Jaehyeong Park, Youngmok Jung, Hwijoon Lim, H.~Yeo, and Dongsu
+  Han.
+\newblock Topfull: An adaptive top-down overload control for slo-oriented
+  microservices.
+\newblock In \emph{Conference on Applications, Technologies, Architectures, and
+  Protocols for Computer Communication}, 2024.
+\newblock \doi{10.1145/3651890.3672253}.
+
+\bibitem[Shahrad et~al.(2020)Shahrad, Fonseca, Goiri, Chaudhry, Batum, Cooke,
+  Laureano, Tresness, Russinovich, and Bianchini]{Shahrad2020}
+Mohammad Shahrad, Rodrigo Fonseca, Í. Goiri, G.~Chaudhry, Paul Batum, Jason
+  Cooke, Eduardo Laureano, Colby Tresness, M.~Russinovich, and R.~Bianchini.
+\newblock Serverless in the wild: Characterizing and optimizing the serverless
+  workload at a large cloud provider.
+\newblock In \emph{USENIX Annual Technical Conference}, pages 205--218, 2020.
+
+\bibitem[Whittle(1988)]{Whittle1988}
+P.~Whittle.
+\newblock Restless bandits: Activity allocation in a changing world.
+\newblock \emph{Journal of Applied Probability}, 25\penalty0 (A):\penalty0
+  287--298, 1988.
+\newblock \doi{10.2307/3214163}.
+
+\end{thebibliography}
