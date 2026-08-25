@@ -1,0 +1,10 @@
+{
+  "description": "Config subset for the conformal admission control demo. eval.py self-generates all traffic/policy logs internally (no external dataset dependency existed at execution time), so this file carries the small-scale run configuration instead of raw records.",
+  "alpha": 0.10,
+  "tolerance_pp": 0.03,
+  "regimes": ["stationary", "burst", "drift", "switch", "adversarial"],
+  "baselines": ["fixed_threshold", "index_based", "rl_frozen"],
+  "all_policies": ["conformal_aci", "fixed_threshold", "index_based", "rl_frozen", "oracle_hindsight"],
+  "seeds": [0, 1, 2],
+  "calib_seed": 9001
+}
