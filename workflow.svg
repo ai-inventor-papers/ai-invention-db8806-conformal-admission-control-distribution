@@ -20,7 +20,7 @@
 <g><title></title><path d="M 355.0 74.0 C 355.0 112.7, 498.0 121.3, 498.0 160.0" fill="none" stroke="#8b949e" stroke-width="1.6" stroke-opacity="0.8" marker-end="url(#arrow)"/></g>
 <g><title>uses: dataset</title><path d="M 212.0 258.0 C 212.0 296.7, 212.0 305.3, 212.0 344.0" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-opacity="0.8" marker-end="url(#arrow)"/></g>
 <g><title>uses: dataset</title><path d="M 212.0 258.0 C 212.0 296.7, 498.0 305.3, 498.0 344.0" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-opacity="0.8" marker-end="url(#arrow)"/></g>
-<a href="https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution" target="_top">
+<a href="https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution" target="_top">
   <g class="node">
     <rect class="card" x="270.0" y="22.0" width="170" height="52" rx="26"
       fill="#ffffff" stroke="#d0d7de" stroke-width="1" filter="url(#shadow)"/>
@@ -30,7 +30,7 @@
   </g>
 </a>
 <text x="22" y="214.0" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#8b949e">R1</text>
-<a href="https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1" target="_top">
+<a href="https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1" target="_top">
   <g class="node">
     <title>Real Azure Traffic Traces for Admission Control</title>
     <rect class="card" x="86.0" y="162.0" width="252" height="96" rx="10"
@@ -45,7 +45,7 @@
       fill="#1f2328"><tspan x="100.0" dy="0">Real Azure Traffic Traces for</tspan><tspan x="100.0" dy="14">Admission Control</tspan></text>
   </g>
 </a>
-<a href="https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1" target="_top">
+<a href="https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1" target="_top">
   <g class="node">
     <title>Verdict on Conformal Admission Control</title>
     <rect class="card" x="372.0" y="162.0" width="252" height="96" rx="10"
@@ -62,7 +62,7 @@
 </a>
 <text x="22" y="398.0" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#8b949e">R2</text>
 <line x1="86" y1="302.0" x2="624" y2="302.0" stroke="#d8dee4" stroke-dasharray="3 5"/>
-<a href="https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1" target="_top">
+<a href="https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1" target="_top">
   <g class="node">
     <title>Conformal Admission Control on Real Azure Traces</title>
     <rect class="card" x="86.0" y="346.0" width="252" height="96" rx="10"
@@ -77,7 +77,7 @@
       fill="#1f2328"><tspan x="100.0" dy="0">Conformal Admission Control on Real</tspan><tspan x="100.0" dy="14">Azure Traces</tspan></text>
   </g>
 </a>
-<a href="https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1" target="_top">
+<a href="https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1" target="_top">
   <g class="node">
     <title>Real-Trace Verdict for Admission Control</title>
     <rect class="card" x="372.0" y="346.0" width="252" height="96" rx="10"
@@ -92,7 +92,7 @@
       fill="#1f2328"><tspan x="386.0" dy="0">Real-Trace Verdict for Admission</tspan><tspan x="386.0" dy="14">Control</tspan></text>
   </g>
 </a>
-<a href="https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/blob/main/paper.pdf" target="_top">
+<a href="https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/blob/main/paper.pdf" target="_top">
   <g class="node">
     <rect class="card" x="260.0" y="530.0" width="190" height="72" rx="10"
       fill="#ffffff" stroke="#e11d48" stroke-width="1.4" filter="url(#shadow)"/>
