@@ -2,14 +2,14 @@
 
 <div align="center">
 
-<a href="https://cdn.jsdelivr.net/gh/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution@main/workflow.svg">
+<a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution@main/workflow.svg">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="workflow-dark.svg">
   <img alt="Artifact workflow — how every artifact in this repo was built" src="workflow.svg">
 </picture>
 </a>
 
-<sub>🖱️ <b><a href="https://cdn.jsdelivr.net/gh/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution@main/workflow.svg">Open the interactive diagram</a></b> — every card links to its artifact folder.</sub>
+<sub>🖱️ <b><a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution@main/workflow.svg">Open the interactive diagram</a></b> — every card links to its artifact folder.</sub>
 
 </div>
 
@@ -30,7 +30,7 @@ EVIDENTIARY STATUS after iteration 2 (real Azure-trace primary evaluation, closi
 
 </details>
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-red)](https://cdn.jsdelivr.net/gh/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution@main/paper.pdf) [![LaTeX Source](https://img.shields.io/badge/LaTeX-Source-orange)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/paper_latex)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-red)](https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution@main/paper.pdf) [![LaTeX Source](https://img.shields.io/badge/LaTeX-Source-orange)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/paper_latex)
 
 This repository contains all **4 artifacts** produced across **2 rounds** of an autonomous AI research run — round by round, exactly in the order they were invented.
 
@@ -38,15 +38,15 @@ This repository contains all **4 artifacts** produced across **2 rounds** of an 
 
 | Artifact | Type | Demo | Source | Builds on |
 |----------|------|------|--------|-----------|
-| **[Real Azure Traffic Traces for Admission Control](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1)** | [![dataset](https://img.shields.io/badge/dataset-f59e0b)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-1/dataset-1/demo/data_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1/src) | — |
-| **[Verdict on Conformal Admission Control](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1)** | [![evaluation](https://img.shields.io/badge/evaluation-10b981)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-1/evaluation-1/demo/eval_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1/src) | — |
+| **[Real Azure Traffic Traces for Admission Control](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1)** | [![dataset](https://img.shields.io/badge/dataset-f59e0b)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-1/dataset-1/demo/data_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1/src) | — |
+| **[Verdict on Conformal Admission Control](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1)** | [![evaluation](https://img.shields.io/badge/evaluation-10b981)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-1/evaluation-1/demo/eval_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/evaluation-1/src) | — |
 
 ## Round 2
 
 | Artifact | Type | Demo | Source | Builds on |
 |----------|------|------|--------|-----------|
-| **[Conformal Admission Control on Real Azure Traces](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1)** | [![experiment](https://img.shields.io/badge/experiment-8b5cf6)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-2/experiment-1/demo/method_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1/src) | <sub><i>uses:</i><br/>[dataset‑1&nbsp;(R1)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1)</sub> |
-| **[Real-Trace Verdict for Admission Control](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1)** | [![evaluation](https://img.shields.io/badge/evaluation-10b981)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-2/evaluation-1/demo/eval_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1/src) | <sub><i>uses:</i><br/>[dataset‑1&nbsp;(R1)](https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1)</sub> |
+| **[Conformal Admission Control on Real Azure Traces](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1)** | [![experiment](https://img.shields.io/badge/experiment-8b5cf6)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-2/experiment-1/demo/method_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/experiment-1/src) | <sub><i>uses:</i><br/>[dataset‑1&nbsp;(R1)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1)</sub> |
+| **[Real-Trace Verdict for Admission Control](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1)** | [![evaluation](https://img.shields.io/badge/evaluation-10b981)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/blob/main/round-2/evaluation-1/demo/eval_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-2/evaluation-1/src) | <sub><i>uses:</i><br/>[dataset‑1&nbsp;(R1)](https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution/tree/main/round-1/dataset-1)</sub> |
 
 ## Repository Structure
 
@@ -89,7 +89,7 @@ No installation required!
 
 ```bash
 # Clone the repo
-git clone https://github.com/ai-inventor-outputs/ai-invention-db8806-conformal-admission-control-distribution
+git clone https://github.com/ai-inventor-papers/ai-invention-db8806-conformal-admission-control-distribution
 cd ai-invention-db8806-conformal-admission-control-distribution
 
 # Install dependencies
